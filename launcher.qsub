@@ -1,0 +1,5 @@
+#!/bin/bash
+#$ -N Cited_emeric
+#$ -cwd
+
+/usr/bin/python3 pubmedCitation.py
