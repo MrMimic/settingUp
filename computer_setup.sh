@@ -72,7 +72,7 @@ sudo rm *.deb
 # mySQL
 sudo apt-get -y install mysql-client
 sudo apt-get -y install mysql-server
-
+sudo apt-get -y install mysql-workbench
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - # 
 # System modifications
