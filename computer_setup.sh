@@ -56,10 +56,12 @@ sudo pip3 install cython				# Faster execution on python functions
 sudo pip3 install requests				# curl for python
 sudo pip3 install bs4					# Parse HTML request
 sudo pip3 install nltk					# Natural Langage ToolKit
+sudo pip3 install certifi   # POST requests
 # python3 -c "import nltk ; nltk.download('<MODULE_NAME>')"
 sudo pip3 install numpy					# Mathematical array and rapid shit
 sudo pip3 install tensorflow		# Ready for machine learning ?
 sudo pip3 install keras					# Text processing
+sudo pip3 install pymysql   #SQL connection
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - # 
 # R, Rstudio
 sudo apt-get -y install r-base
