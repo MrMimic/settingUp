@@ -59,9 +59,12 @@ sudo pip3 install nltk					# Natural Langage ToolKit
 sudo pip3 install certifi   # POST requests
 # python3 -c "import nltk ; nltk.download('<MODULE_NAME>')"
 sudo pip3 install numpy					# Mathematical array and rapid shit
-sudo pip3 install tensorflow		# Ready for machine learning ?
+sudo pip3 install tensorflow-gpu		# Ready for machine learning ?
 sudo pip3 install keras					# Text processing
 sudo pip3 install pymysql   #SQL connection
+sudo pip3 install matplotlib    # DRAWBITCH
+sudo apt-get install python3-tk
+sudo apt-get install pandas
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - # 
 # R, Rstudio
 sudo apt-get -y install r-base
