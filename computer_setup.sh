@@ -1,6 +1,6 @@
 #!/bin/bash
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - # 
-# Installation script for every programs, updates and shit
+# Installation script for every programs, updates and shit when installing a new computer
 
 
 echo Starting instalation
