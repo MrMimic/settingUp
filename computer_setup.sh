@@ -24,6 +24,7 @@ sudo apt-get update
 sudo apt-get -y install spotify-client spotify-client-gnome-support
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - # 
 sudo apt-get -y install geany
+sudo apt-get install geany-plugin*
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - # 
 sudo apt-get -y install filezilla
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - # 
