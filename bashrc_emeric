@@ -43,7 +43,7 @@ esac
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-#force_color_prompt=yes
+force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -99,37 +99,9 @@ alias l='ls -CF'
 alias up='sudo apt-get update && sudo apt-get upgrade && sudo apt-get autoremove'
 alias ici='echo "# # # # # # # # # # # # # # # # # # # # # # # #" '
 alias ogrep='\ls -1 | grep -i $2'
-# Compter les occurences de "##" dans les docx du dossier courant
-alias count1='\ls -1 *.docx | sed "s;\(.*\);docx2txt \1;" | bash'
-alias count2='cat *.txt | grep "##" | wc'
-alias count3='\ls -1 *.txt | grep "201[67]" | sed "s;\(.*\);rm \1;" | bash'
-alias count_files='count1 && count2 && count3'
-# Copie tous les docx de la dropbox dans le dossier ~/FINDER/
-alias getdocx='find /home/emeric/Dropbox\ \(omicX\)/Curation/ -type f -name "*.docx" | sed "s;(;\\\(;g" | sed "s;);\\\);g" | sed "s; ;\\\ ;g"| sed "s;\(.*\);cp \1 /home/emeric/FINDER/;" | bash'
-# Supprime tous les docx du dossier ~/FINDER/
-alias rmdocx='rm /home/emeric/FINDER/*.docx'
-alias look='cat * | grep "" ./* | grep -i'
-
-# Rechercher un truc dans le dossier ~/FINDER/ après avoir copié tous les docx (pour trouver le responsable d'une nom de file pourri)
-find_text() {
-	find /home/emeric/Dropbox\ \(omicX\)/Curation/ -type f -name "*.docx" | sed "s;(;\\\(;g" | sed "s;);\\\);g" | sed "s; ;\\\ ;g"| sed "s;\(.*\);cp \1 /home/emeric/FINDER/;" | bash
-	\ls -1 /home/emeric/FINDER/*.docx | sed "s;(;\\\(;g" | sed "s;);\\\);g" | sed "s; ;\\\ ;g" | sed "s;\(.*\);docx2txt \1;" | bash
-	cat /home/emeric/FINDER/*.txt | grep "" /home/emeric/FINDER/*.txt | grep -i "$1"
-	rm /home/emeric/FINDER/*.txt
-	rm /home/emeric/FINDER/*.docx
-}
-alias finder='find_text'
-alias sf='cat *.txt | cat *.csv | grep -i'
+alias debianserver='ssh -p 1122 emeric@192.168.4.167'
 alias omicdb='mysql -u root -h localhost -p -D omictools'
 
-########################
-# some more ls aliases #
-########################
-
-
-
-
-# Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
@@ -153,5 +125,15 @@ if ! shopt -oq posix; then
   fi
 fi
 
+
+
 # EDITEUR DE TEXTE
 export EDITOR=/usr/bin/geany
+# TENSORFLOW
+export LD_LIBRARY_PATH=/usr/lib/nvidia-375:/usr/local/cuda/lib64/
+export TF_CPP_MIN_LOG_LEVEL=2
+export PATH=$PATH:/usr/local/cuda-8.0/bin
+
+
+
+
