@@ -99,8 +99,6 @@ alias l='ls -CF'
 alias up='sudo apt-get update && sudo apt-get upgrade && sudo apt-get autoremove'
 alias ici='echo "# # # # # # # # # # # # # # # # # # # # # # # #" '
 alias ogrep='\ls -1 | grep -i $2'
-alias debianserver='ssh -p 1122 emeric@192.168.4.167'
-alias omicdb='mysql -u root -h localhost -p -D omictools'
 
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
